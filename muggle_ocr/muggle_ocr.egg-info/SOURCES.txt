@@ -1,0 +1,14 @@
+README.md
+setup.py
+muggle_ocr/__init__.py
+muggle_ocr/captcha.pb
+muggle_ocr/captcha.yaml
+muggle_ocr/init_data.py
+muggle_ocr/ocr.pb
+muggle_ocr/ocr.yaml
+muggle_ocr/sdk.py
+muggle_ocr.egg-info/PKG-INFO
+muggle_ocr.egg-info/SOURCES.txt
+muggle_ocr.egg-info/dependency_links.txt
+muggle_ocr.egg-info/requires.txt
+muggle_ocr.egg-info/top_level.txt
