@@ -13,7 +13,7 @@ import PIL.Image as PIL_Image
 from enum import Enum, unique
 import tensorflow as tf
 from tensorflow.python.framework.errors_impl import NotFoundError
-from muggle_ocr.init_data import init_img
+from .init_data import init_img
 
 WORK_PATH = os.path.dirname(__file__)
 SPACE_TOKEN = ['']
