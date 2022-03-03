@@ -6,7 +6,7 @@ from muggle_ocr.muggle_ocr import SDK,ModelType
 
 if __name__ == '__main__':
     sdk = SDK(model_type=ModelType.Captcha)
-    with open("./webmail/gen_capt.gif", "rb") as f:
+    with open("./webmail/images.gif", "rb") as f:
         b = f.read()
         text = sdk.predict(image_bytes=b)
         print(text)

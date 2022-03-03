@@ -9,6 +9,10 @@ numpy = "*"
 opencv-python = "*"
 Pillow = "*"
 PyYAML = "*"
+selenium = "*"
+requests = "*"
+python-dotenv = "*"
+bs4 = "*"
 
 [dev-packages]
 
