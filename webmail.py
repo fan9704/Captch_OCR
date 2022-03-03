@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select,WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 import time
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from dotenv import load_dotenv
 import urllib
@@ -14,10 +15,10 @@ browser=webdriver.Chrome()#open browser
 def login():
     browser.get(url)
     print("[System]",time.strftime(" %I:%M:%S %p",time.localtime()), "Webmail Linked ")
-    # username = os.getenv('username')
-    # password = os.getenv('password')
-    username = "B10923044"
-    password = "harry0703"
+    username = os.getenv('username')
+    password = os.getenv('password')
+    # username = "B10923044"
+    # password = "harry0703"
     elem = browser.find_element_by_css_selector("input[name='USERID']")
     elem.send_keys(username)#key in username
     elem = browser.find_element_by_css_selector("input[name='PASSWD']")
@@ -39,10 +40,14 @@ def login():
         b = f.read()
         text = sdk.predict(image_bytes=b)
         print(text)
-
-    elem = browser.find_element_by_css_selector("input.captchaInput")
-    elem.send_keys(text)#key in username
-    elem.send_keys(Keys.RETURN) #Send info
+    try:
+        elem=browser.find_element(by=By.CSS_SELECTOR,value="input.captchaInput")
+        #elem = browser.find_element_by_css_selector("input.captchaInput")
+        elem.send_keys(text)#key in username
+        elem.send_keys(Keys.RETURN) #Send info
+    except:
+        print("[System]",'',"Detecting Error")
+        login()
 
 
 if __name__ == "__main__":
