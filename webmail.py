@@ -16,8 +16,8 @@ def login():
     print("[System]",time.strftime(" %I:%M:%S %p",time.localtime()), "Webmail Linked ")
     # username = os.getenv('username')
     # password = os.getenv('password')
-    username = "B10923057"
-    password = "cxz123499"
+    username = "B10923044"
+    password = "harry0703"
     elem = browser.find_element_by_css_selector("input[name='USERID']")
     elem.send_keys(username)#key in username
     elem = browser.find_element_by_css_selector("input[name='PASSWD']")
