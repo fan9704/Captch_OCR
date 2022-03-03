@@ -1,8 +1,7 @@
-# 使用muggle-ocr模块进行验证码识别
+# Use muggle-ocr module to detecting captcha code
+this project has tested by 5 types 50 number and alphabet,for every captcha accuracy has reach more than 90%
 
-随意选取了5种共50个数字及字母验证码进行了小样本测试，对各类验证码识别准确率达到了90%以上。
+detect very fast ,use timing in 0.01s light weight
 
-识别速度超快，时间在0.01s量级
-
-程序功能为从CAPTCHA文件夹种依次选择验证码图片文件，复制到rename文件夹，进行内容识别并以识别出的内容重命名验证码图片
-
+Program function  from img folder select captcha pictures (no matter .gif .jfif .png .jpg format) most of formation can be convert to binary text .
+and final will return OCR recognize text 
